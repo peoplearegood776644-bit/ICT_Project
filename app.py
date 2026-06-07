@@ -24,7 +24,6 @@ page = tf.sidebar.radio(
     [
         "📊 Panel Efficiency Analyzer", 
         "💰 Homeowner Cost Calculator", 
-        "🌐 Global Adoption Trends"
     ]
 )
 
