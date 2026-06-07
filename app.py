@@ -219,36 +219,5 @@ elif page == "💰 Homeowner Cost Calculator":
         tf.plotly_chart(fig_finance, use_container_width=True)
         # ==========================================
         # PAGE 3: 🌐 GLOBAL SOLAR ADOPTION TRENDS
-            # Filtering Interface
-    selected_countries = tf.multiselect(
-        "Select Countries to Compare", 
-        options=["China", "United States", "Germany", "India"], 
-        default=["China", "United States", "Germany", "India"]
-    )
-    
-    # FIX: Safety check to prevent empty dataframe errors if nothing is selected
-    if not selected_countries:
-        tf.warning("⚠️ Please select at least one country from the dropdown to display adoption trends.")
-    else:
-        df_filtered = df_global[df_global["Country"].isin(selected_countries)]
-        
-        # Generation Capacity Line Graph
-        fig_global = px.line(
-            df_filtered, 
-            x="Year", 
-            y="Capacity (GW)", 
-            color="Country", 
-            markers=True,
-            title="Photovoltaic (PV) Operational Capacity Scaling Over Time"
-        )
-        
-        # UI Polish: Customizing chart grid layout axes
-        fig_global.update_layout(
-            xaxis_title="Calendar Year",
-            yaxis_title="Total Installed Capacity (Gigawatts - GW)",
-            margin=dict(l=20, r=20, t=40, b=20)
-        )
-        
-        tf.plotly_chart(fig_global, use_container_width=True)
 
-
+  
