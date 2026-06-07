@@ -217,6 +217,3 @@ elif page == "💰 Homeowner Cost Calculator":
         fig_finance.add_hline(y=0, line_dash="dash", line_color="white", opacity=0.5)
         fig_finance.update_layout(xaxis=dict(tickmode='linear', dtick=2), margin=dict(l=20, r=20, t=40, b=20))
         tf.plotly_chart(fig_finance, use_container_width=True)
-
-# ==========================================
-# PAGE 3: 🌐 GLOBAL SOLAR ADOPTION TRENDS
